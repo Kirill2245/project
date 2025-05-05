@@ -247,6 +247,9 @@ window.addEventListener('resize', () => {
 });
 let topicFlag = true;
 topic.addEventListener('click', () => {
+    function setBlackText(button) {
+        button.style.color = "#757575";
+    }
     if (topicFlag == true){
         topic.style.backgroundImage = "url(img/topic_light.png)";
         topicBox.style.borderColor = "white";
@@ -255,9 +258,6 @@ topic.addEventListener('click', () => {
         header.style.backgroundColor = "#3A3A3A"
         function setWhiteText(button) {
             button.style.color = "white";
-        }
-        function setBlackText(button) {
-            button.style.color = "#757575";
         }
         btn_home.addEventListener('mouseover', () => setWhiteText(btn_home));
         btn_home.addEventListener('mouseout', () => setBlackText(btn_home));
