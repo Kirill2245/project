@@ -42,6 +42,8 @@ const p_feture = document.querySelectorAll(".p_feture");
 const teamText = document.querySelectorAll(".teamText");
 const contact_h1 = document.getElementById("contact_h1");
 const contact_p = document.getElementById("contact_p");
+//contact
+const contactP = document.querySelectorAll(".contactP");
 
 btn_feature.addEventListener('click', () => {
     home_close();
@@ -275,6 +277,10 @@ topic.addEventListener('click', () => {
         footer_team.style.backgroundColor = "#3A3A3A";
         contact_p.style.color = "#F4F7FE";
         contact_h1.style.color = "#F4F7FE";
+        //contact
+        contactP.forEach(i => {
+            i.style.color = "#F4F7FE"
+        })
     }
     else{
         topic.style.backgroundImage = "url(img/topic_hight.png)";
@@ -304,6 +310,10 @@ topic.addEventListener('click', () => {
         footer_team.style.backgroundColor = "#F4F7FE";
         contact_p.style.color = "#757575";
         contact_h1.style.color = "#3A3A3A";
+        //contact
+        contactP.forEach(i => {
+            i.style.color = "#757575"
+        })
     }
 })
 let typingTimeout;
