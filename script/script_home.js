@@ -38,12 +38,16 @@ const body = document.getElementById("body");
 const home_p = document.getElementById("home_p");
 //feature
 const p_feture = document.querySelectorAll(".p_feture");
+const h2_form = document.getElementById("h2_form")
 //team
 const teamText = document.querySelectorAll(".teamText");
 const contact_h1 = document.getElementById("contact_h1");
 const contact_p = document.getElementById("contact_p");
 //contact
 const contactP = document.querySelectorAll(".contactP");
+const inputs = document.querySelectorAll(".drop_line input");
+const selectDeportment = document.getElementById("selectDeportment");
+const area = document.getElementById("area");
 
 btn_feature.addEventListener('click', () => {
     home_close();
@@ -270,6 +274,8 @@ topic.addEventListener('click', () => {
         p_feture.forEach(i => {
             i.style.color = "#F4F7FE";
         });
+        footer_feature.style.backgroundColor = "#3A3A3A";
+        h2_form.style.color = "#F4F7FE"
         //Team
         teamText.forEach(i => {
             i.style.color = "#F4F7FE";
@@ -280,7 +286,16 @@ topic.addEventListener('click', () => {
         //contact
         contactP.forEach(i => {
             i.style.color = "#F4F7FE"
-        })
+        });
+        inputs.forEach(i => {
+            i.style.backgroundColor = "rgb(146, 146, 146)";
+            i.style.borderColor = "white";
+        });
+        selectDeportment.style.backgroundColor = "rgb(146, 146, 146)";
+        selectDeportment.style.borderColor = "white";
+        area.style.borderColor = "white";
+        area.style.backgroundColor = "rgb(146, 146, 146)";
+
     }
     else{
         topic.style.backgroundImage = "url(img/topic_hight.png)";
@@ -306,14 +321,24 @@ topic.addEventListener('click', () => {
         p_feture.forEach(i => {
             i.style.color = "#757575"; // Изменяем цвет текста на красный
         });
+        footer_feature.style.backgroundColor = "#F4F7FE";
+        h2_form.style.color = "#3A3A3A"
         //team
         footer_team.style.backgroundColor = "#F4F7FE";
         contact_p.style.color = "#757575";
         contact_h1.style.color = "#3A3A3A";
         //contact
         contactP.forEach(i => {
-            i.style.color = "#757575"
-        })
+            i.style.color = "#757575";
+        });
+        inputs.forEach(i => {
+            i.style.backgroundColor = "white";
+            i.style.borderColor = "#75757591";
+        });
+        selectDeportment.style.backgroundColor = "white";
+        selectDeportment.style.borderColor = "#75757591";
+        area.style.borderColor = "#75757591";
+        area.style.backgroundColor = "white";
     }
 })
 let typingTimeout;
